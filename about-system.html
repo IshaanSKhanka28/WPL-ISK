@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About System - Heatwave Intelligence System</title>
+  <!-- Task 3: External CSS Links -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="table.css">
+  <link rel="stylesheet" href="form.css">
+
+  <!-- Task 2: Internal CSS for Navigation Menu & Task 10 Highlight Box -->
+  <style>
+    .portal-nav-list {
+      list-style: none;
+      /* Task 2 requirement */
+      margin: 0;
+      padding: 0;
+    }
+
+    .portal-nav-list li {
+      display: inline-block;
+      /* Task 2 requirement */
+      margin-right: 5px;
+    }
+
+    .portal-nav-list li a {
+      color: #ffffff;
+      /* Task 2 requirement */
+      text-decoration: none;
+      /* Task 2 requirement */
+      padding: 6px 12px;
+      display: inline-block;
+    }
+
+    .portal-nav-list li a:hover,
+    .portal-nav-list li a.active {
+      /* Task 2 requirement */
+      background-color: #bf360c;
+      color: #ffffff;
+    }
+
+    /* Task 10: Clean Heatwave Advisory Box Styling */
+    .highlight-offer-box {
+      background-color: #fff3e0;
+      border: 1px solid #ffe0b2;
+      border-left: 5px solid #d84315;
+      color: #333333;
+      padding: 14px 18px;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(216, 67, 21, 0.12);
+      animation: gentle-glow 3s infinite ease-in-out;
+    }
+
+    .highlight-offer-box h2 {
+      color: #d84315;
+      font-size: 16px;
+      font-weight: bold;
+      margin: 0 0 5px 0;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .highlight-offer-box p {
+      color: #444444;
+      font-size: 14px;
+      margin: 0;
+    }
+
+    @keyframes gentle-glow {
+      0% {
+        box-shadow: 0 2px 6px rgba(216, 67, 21, 0.12);
+      }
+      50% {
+        box-shadow: 0 4px 12px rgba(216, 67, 21, 0.25);
+      }
+      100% {
+        box-shadow: 0 2px 6px rgba(216, 67, 21, 0.12);
+      }
+    }
+
+    blockquote {
+      font-style: italic;
+      margin: 15px 0;
+      padding-left: 15px;
+      border-left: 3px solid #d84315;
+      color: #555555;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page-container">
+
+    <!-- Task 1: Inline CSS on Header -->
+    <header class="site-header"
+      style="background-color: #ffe0b2; padding: 15px; border: 1px solid #d84315; border-radius: 4px;">
+      <h1 style="color: #d84315; text-align: center; margin: 0;">Heatwave Intelligence System</h1>
+      <p style="text-align: center; color: #333333; margin: 5px 0;">About the System</p>
+
+      <!-- Task 2: Internal CSS styled Navbar -->
+      <nav class="navbar-container">
+        <ul class="portal-nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about-system.html" class="active">About System</a></li>
+          <li><a href="alert-details.html">Alert Details</a></li>
+          <li><a href="forecast.html">Forecast Results</a></li>
+          <li><a href="hotspot-map.html">Hotspot Map</a></li>
+          <li><a href="sources.html">Data Sources</a></li>
+          <li><a href="subscribe.html">Subscribe</a></li>
+          <li><a href="Heatwave.html">Media Center</a></li>
+          <li><a href="Navigation.html">Navigation Menu</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Task 9: Page Layout (Sidebar left, Content right) -->
+    <div class="main-layout">
+
+      <!-- Task 4: Sidebar Card -->
+      <aside class="sidebar">
+        <div class="sidebar-card">
+          <h3>Quick Navigation</h3>
+          <ul class="sidebar-list">
+            <li><a href="#objective">Objective</a></li>
+            <li><a href="#data-sources">Data Sources</a></li>
+            <li><a href="#stakeholders">Stakeholders</a></li>
+            <li><a href="Heatwave.html">Media Awareness</a></li>
+            <li><a href="Navigation.html">Portal Helplines</a></li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Main Content Area -->
+      <main class="main-content">
+        <!-- Task 10: Heatwave Advisory Highlight Box -->
+        <div class="highlight-offer-box">
+          <h2>&#9888; Heatwave System Overview</h2>
+          <p style="margin: 0; font-size: 16px;">
+            Integrating real-time meteorological tracking with high-level advisory distribution.
+          </p>
+        </div>
+
+        <h2>About the System</h2>
+
+        <!-- Task 5: Card Layout using CSS Box Model -->
+        <div id="objective" class="sidebar-card" style="margin-bottom: 15px;">
+          <h3>Objective</h3>
+          <p>
+            The system aims to provide <strong>early, reliable, and region-specific</strong>
+            warnings of heatwave conditions, enabling <em>timely response</em> by
+            meteorologists, disaster-management officers, and the general public.
+          </p>
+        </div>
+
+        <div id="data-sources" class="sidebar-card" style="margin-bottom: 15px;">
+          <h3>Data Sources</h3>
+          <p>
+            Forecasts are generated using data from <strong>Automatic Weather Stations (AWS)</strong>,
+            the <em>IMD historical database</em>, and real-time satellite feeds, combined through
+            an AI-based prediction model for <strong>higher accuracy</strong>.
+          </p>
+        </div>
+
+        <div id="stakeholders" class="sidebar-card" style="margin-bottom: 15px;">
+          <h3>Stakeholders</h3>
+          <p>
+            Key stakeholders include <strong>meteorologists</strong> who validate forecasts,
+            <strong>disaster-management officers</strong> who coordinate ground response, and
+            <em>citizens</em> who receive advisories to stay safe during severe heat events.
+          </p>
+        </div>
+
+        <blockquote>
+          "Timely and accurate heatwave intelligence saves lives. This system bridges the gap
+          between raw weather data and actionable public advisories."
+          <br>&mdash; Chief Meteorologist, Disaster Management Cell
+        </blockquote>
+      </main>
+    </div>
+
+    <!-- Task 3: Common Footer -->
+    <footer class="site-footer">
+      <p>Heatwave Intelligence System &copy; 2026</p>
+    </footer>
+
+  </div>
+
+</body>
+
+</html>
