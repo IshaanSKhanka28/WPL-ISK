@@ -1,0 +1,234 @@
+mkdirgi<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heatwave Media & Awareness Page - Heatwave Intelligence System</title>
+
+    <!-- Task 3: External CSS Links (style.css, layout.css, nav.css, table.css, form.css) -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="table.css">
+    <link rel="stylesheet" href="form.css">
+
+    <!-- Task 2: Internal CSS for Navigation Menu & Page Effects (<style> in <head>) -->
+    <style>
+        /* Task 2: Style navigation menu */
+        .portal-nav-list {
+            list-style: none; /* Task 2: Remove bullet points */
+            margin: 0;
+            padding: 0;
+        }
+
+        .portal-nav-list li {
+            display: inline-block; /* Task 2: Display menu items horizontally */
+            margin-right: 5px;
+        }
+
+        .portal-nav-list li a {
+            color: #ffffff; /* Task 2: Link colors */
+            text-decoration: none; /* Task 2: text-decoration */
+            padding: 6px 12px;
+            display: inline-block; /* Task 2: display: inline-block */
+            border-radius: 3px;
+        }
+
+        .portal-nav-list li a:hover,
+        .portal-nav-list li a.active {
+            background-color: #bf360c; /* Task 2: :hover effect */
+            color: #ffffff;
+        }
+
+        /* Task 10: Clean Heatwave Advisory Box Styling */
+        .highlight-offer-box {
+            background-color: #fff3e0;
+            border: 1px solid #ffe0b2;
+            border-left: 5px solid #d84315;
+            color: #333333;
+            padding: 14px 18px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 6px rgba(216, 67, 21, 0.12);
+            animation: gentle-glow 3s infinite ease-in-out;
+        }
+
+        .highlight-offer-box h2 {
+            color: #d84315;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0 0 5px 0;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .highlight-offer-box p {
+            color: #444444;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        @keyframes gentle-glow {
+            0% {
+                box-shadow: 0 2px 6px rgba(216, 67, 21, 0.12);
+            }
+            50% {
+                box-shadow: 0 4px 12px rgba(216, 67, 21, 0.25);
+            }
+            100% {
+                box-shadow: 0 2px 6px rgba(216, 67, 21, 0.12);
+            }
+        }
+
+        /* Task 6: Media Gallery Styling & Hover Zoom Effects */
+        .media-box {
+            margin-bottom: 25px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Task 6: transition */
+        }
+
+        .media-box:hover {
+            transform: scale(1.01); /* Task 6: transform: scale() */
+            box-shadow: 0 4px 12px rgba(216, 67, 21, 0.2);
+        }
+
+        .responsive-media-frame {
+            width: 100%;
+            max-width: 100%;
+            border-radius: 6px;
+            border: 2px solid #d84315;
+            transition: transform 0.3s ease; /* Task 6 requirement */
+        }
+
+        .responsive-media-frame:hover {
+            transform: scale(1.02); /* Task 6: hover zoom effect */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page-container">
+
+        <!-- Task 1: Style the Homepage Header (Inline CSS) -->
+        <header class="site-header" style="background-color: #ffe0b2; padding: 15px; border: 1px solid #d84315; border-radius: 4px;">
+            <h1 style="color: #d84315; text-align: center; margin: 0;">Heatwave Intelligence System</h1>
+            <p style="text-align: center; color: #333333; margin: 5px 0;">Heatwave Awareness & Media Center</p>
+            
+            <!-- Task 2: Internal CSS Styled Navbar -->
+            <nav class="navbar-container">
+                <ul class="portal-nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about-system.html">About System</a></li>
+                    <li><a href="alert-details.html">Alert Details</a></li>
+                    <li><a href="forecast.html">Forecast Results</a></li>
+                    <li><a href="hotspot-map.html">Hotspot Map</a></li>
+                    <li><a href="sources.html">Data Sources</a></li>
+                    <li><a href="subscribe.html">Subscribe</a></li>
+                    <li><a href="Heatwave.html" class="active">Media Center</a></li>
+                    <li><a href="Navigation.html">Navigation Menu</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Task 9: Page Layout Using CSS (Sidebar Left, Content Right, Footer Bottom) -->
+        <div class="main-layout">
+
+            <!-- Task 4: Sidebar Categories styled as a Card -->
+            <aside class="sidebar">
+                <div class="sidebar-card">
+                    <h3>Media Navigation</h3>
+                    <ul class="sidebar-list">
+                        <li><a href="#video-sec">Awareness Video</a></li>
+                        <li><a href="#audio-sec">Audio Advisory</a></li>
+                        <li><a href="#map-sec">Location Map</a></li>
+                        <li><a href="#imd-sec">IMD Live Portal</a></li>
+                        <li><a href="Navigation.html">Portal Helplines</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <main class="main-content">
+
+                <!-- Task 10: CSS Effects & Highlighting (Special Event / Offer Box) -->
+                <div class="highlight-offer-box">
+                    <h2>&#128364; Special Live Broadcast Bulletin</h2>
+                    <p style="margin: 0; font-size: 16px;">
+                        Listen to real-time audio announcements and watch safety protocols for peak heat conditions.
+                    </p>
+                </div>
+
+                <h2>Heatwave Awareness - Media Center</h2>
+                <hr style="border: 0; border-top: 1px solid #ddd; margin: 15px 0;">
+
+                <!-- Task 5: Box Model Card Layout for Media Items -->
+                <div id="video-sec" class="media-box">
+                    <h3>Heatwave Awareness Video</h3>
+                    <div class="image-gallery"> <!-- Task 6: Image/Media Gallery Styling -->
+                        <video class="responsive-media-frame" controls style="max-width: 640px; height: auto;">
+                            <source src="C:\Users\KJSCE\Downloads\istockphoto-2062654775-640_adpp_is.mp4" type="video/mp4">
+                            <source src="heatwave_awareness.ogg" type="video/ogg">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
+                <div id="audio-sec" class="media-box">
+                    <h3>Heatwave Advisory - Audio Announcement</h3>
+                    <audio controls autoplay loop style="width: 100%; max-width: 500px; margin-top: 10px;">
+                        <source src="file:///C:/Users/KJSCE/Downloads/2022050294.mp3" type="audio/mpeg">
+                        <source src="heatwave_advisory.ogg" type="audio/ogg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div id="map-sec" class="media-box">
+                    <h3>Location Map</h3>
+                    <iframe
+                        class="responsive-media-frame"
+                        src="https://www.google.com/maps?q=New+Delhi&output=embed"
+                        height="450"
+                        style="border:0; width: 100%;"
+                        allowfullscreen=""
+                        loading="lazy">
+                    </iframe>
+                </div>
+
+                <div id="imd-sec" class="media-box">
+                    <h3>IMD Website (Embedded)</h3>
+                    <iframe
+                        class="responsive-media-frame"
+                        src="https://mausam.imd.gov.in/mumbai/#."
+                        height="500"
+                        style="border:0; width: 100%;"
+                        title="IMD Website">
+                    </iframe>
+                </div>
+
+                <noscript>
+                    <p style="color:red; font-weight:bold; padding: 10px; border: 1px solid red; background-color: #ffe6e6; border-radius: 4px;">
+                        JavaScript is disabled in your browser. Some interactive
+                        features of this Heatwave Awareness Portal may not work
+                        correctly. Please enable JavaScript for the best experience.
+                    </p>
+                </noscript>
+
+            </main>
+        </div>
+
+        <!-- Task 3: Common Footer Style -->
+        <footer class="site-footer">
+            <p>Heatwave Intelligence System &copy; 2026</p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
