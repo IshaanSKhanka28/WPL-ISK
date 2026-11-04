@@ -64,13 +64,15 @@
 
                 <div id="map-sec" class="media-box">
                     <h3>Location Map</h3>
-                    <iframe class="responsive-media-frame" src="https://www.google.com/maps?q=New+Delhi&output=embed"
+                    <iframe class="responsive-media-frame" src="https://www.google.com/maps/embed?origin=mfe&pb=!1m2!2m1!1sNew+Delhi"
                             height="450" title="Google Map - New Delhi" allowfullscreen loading="lazy"></iframe>
                 </div>
 
+                <!-- The IMD site sends "X-Frame-Options: SAMEORIGIN", so browsers refuse to show it inside an iframe. -->
                 <div id="imd-sec" class="media-box">
-                    <h3>IMD Website (Embedded)</h3>
-                    <iframe class="responsive-media-frame" src="https://mausam.imd.gov.in/mumbai/#." height="500" title="IMD Website"></iframe>
+                    <h3>IMD Live Portal</h3>
+                    <p>The India Meteorological Department website cannot be shown inside another page, so it opens in a new tab.</p>
+                    <a class="media-link" href="https://mausam.imd.gov.in/mumbai/" target="_blank" rel="noopener">Open the IMD website &raquo;</a>
                 </div>
 
                 <noscript>
@@ -85,5 +87,6 @@
         <footer class="site-footer"><p>Heatwave Intelligence System &copy; 2026</p></footer>
     </div>
     <script type="module" src="js/site.js"></script>
+    <script type="module" src="js/media-fallback.js"></script>
 </body>
 </html>
