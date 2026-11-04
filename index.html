@@ -1,117 +1,37 @@
 <!DOCTYPE html>
+<!-- Experiment 1 / Task 1 - Home page: HTML5 document structure and global attributes (id, class, title). -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heatwave Intelligence System</title>
-    <!-- Task 3: External CSS Links -->
-    <link rel="stylesheet" href="style.css">
-    
-    
-    <!-- Task 2: Internal CSS for Navigation Menu & Task 10 Highlight Box -->
-    <style>
-        .portal-nav-list {
-            list-style: none; /* Task 2 requirement */
-            margin: 0;
-            padding: 0;
-        }
-
-        .portal-nav-list li {
-            display: inline-block; /* Task 2 requirement */
-            margin-right: 5px;
-        }
-
-        .portal-nav-list li a {
-            color: #ffffff; /* Task 2 requirement */
-            text-decoration: none; /* Task 2 requirement */
-            padding: 6px 12px;
-            display: inline-block;
-        }
-
-        .portal-nav-list li a:hover,
-        .portal-nav-list li a.active { /* Task 2 requirement */
-            background-color: #bf360c;
-            color: #ffffff;
-        }
-
-        /* Task 10: Clean Heatwave Advisory Box Styling */
-        .highlight-offer-box {
-            background-color: #fff3e0;
-            border: 1px solid #ffe0b2;
-            border-left: 5px solid #d84315;
-            color: #333333;
-            padding: 14px 18px;
-            border-radius: 6px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 6px rgba(216, 67, 21, 0.12);
-            animation: gentle-glow 3s infinite ease-in-out;
-        }
-
-        .highlight-offer-box h2 {
-            color: #d84315;
-            font-size: 16px;
-            font-weight: bold;
-            margin: 0 0 5px 0;
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-
-        .highlight-offer-box p {
-            color: #444444;
-            font-size: 14px;
-            margin: 0;
-        }
-
-        @keyframes gentle-glow {
-            0% {
-                box-shadow: 0 2px 6px rgba(216, 67, 21, 0.12);
-            }
-            50% {
-                box-shadow: 0 4px 12px rgba(216, 67, 21, 0.25);
-            }
-            100% {
-                box-shadow: 0 2px 6px rgba(216, 67, 21, 0.12);
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-
+<body data-page="index">
     <div class="page-container">
-        
-        <!-- Task 1: Style the Homepage Header (Inline CSS) -->
-        <header class="site-header" style="background-color: #ffe0b2; padding: 15px; border: 1px solid #d84315; border-radius: 4px;">
-            <h1 id="systemName" class="header-title" style="color: #d84315; text-align: center; margin: 0;">
-                Heatwave Intelligence System
-            </h1>
-            <p id="logoText" class="tagline" style="text-align: center; color: #333333; margin: 5px 0;">
-                Early Warning. Timely Action. Safer Communities.
-            </p>
-            <p id="seasonYear" class="season" style="text-align: center; color: #666666; font-size: 14px; margin: 0;">
-                Monitoring Season: Summer 2026
-            </p>
 
-            <!-- Task 2: Internal CSS styled Navbar -->
-            <nav class="navbar-container">
-                <ul class="portal-nav-list">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about-system.html">About System</a></li>
-                    <li><a href="alert-details.html">Alert Details</a></li>
-                    <li><a href="forecast.html">Forecast Results</a></li>
-                    <li><a href="hotspot-map.html">Hotspot Map</a></li>
-                    <li><a href="sources.html">Data Sources</a></li>
-                    <li><a href="subscribe.html">Subscribe</a></li>
-                    <li><a href="Heatwave.html">Media Center</a></li>
-                    <li><a href="Navigation.html">Navigation Menu</a></li>
-                </ul>
-            </nav>
+        <header class="site-header">
+            <span class="portal-badge">Summer 2026 &bull; Real-Time Grid</span>
+            <h1 id="systemName" class="header-title"
+                title="Heatwave Intelligence System: real-time monitoring, forecasting and early warning of extreme heat">Heatwave Intelligence System</h1>
+            <p id="logoText" class="tagline">Early Warning. Timely Action. Safer Communities. Real-time regional telemetry &amp; extreme heat intelligence.</p>
+            <nav class="navbar-container" data-site-nav></nav>
         </header>
 
-        <!-- Task 9: Page Layout (Sidebar left, Content right) -->
         <div class="main-layout">
-            
-            <!-- Task 4: Regional Categories Sidebar styled as a card -->
             <aside class="sidebar">
+                <div class="sidebar-card">
+                    <h3>Intelligence Modules</h3>
+                    <ul class="sidebar-list">
+                        <li><a href="intelligence-suite.html#task1">Temperature Analysis</a></li>
+                        <li><a href="intelligence-suite.html#task2">Risk Decisions &amp; Alerts</a></li>
+                        <li><a href="intelligence-suite.html#task3">Station Object Telemetry</a></li>
+                        <li><a href="intelligence-suite.html#task4">Time-Series Temperature Statistics</a></li>
+                        <li><a href="intelligence-suite.html#task5">Citizen Registration</a></li>
+                        <li><a href="climate-alert.html">Climate Alert</a></li>
+                        <li><a href="react-app/">Climate Stations</a></li>
+                    </ul>
+                </div>
                 <div class="sidebar-card">
                     <h3>Regional Categories</h3>
                     <ul class="sidebar-list">
@@ -119,34 +39,26 @@
                         <li><a href="forecast.html">Central Zone</a></li>
                         <li><a href="forecast.html">Western Zone</a></li>
                         <li><a href="forecast.html">Coastal Zone</a></li>
-                        <li><a href="Heatwave.html">Media Awareness</a></li>
-                        <li><a href="Navigation.html">Portal Helplines</a></li>
+                        <li><a href="media.html">Media Awareness</a></li>
+                        <li><a href="navigation.html">Portal Helplines</a></li>
                     </ul>
                 </div>
             </aside>
 
-            <!-- Main Content Area -->
             <main class="main-content">
-                <!-- Task 10: CSS Effects & Highlighting (Glowing Emergency Box) -->
                 <div class="highlight-offer-box">
                     <h2>&#9888; 24/7 Emergency Heatwave Advisory</h2>
-                    <p style="margin: 0; font-size: 16px;">
-                        Stay updated with real-time IMD weather bulletins & emergency disaster assistance.
-                    </p>
+                    <p>Stay updated with real-time IMD weather bulletins &amp; emergency disaster assistance.</p>
                 </div>
 
                 <h2>Welcome to Heatwave Portal</h2>
-                <p>
-                    The system provides real-time monitoring and warning updates for extreme heatwave conditions.
-                </p>
+                <p>The system provides real-time monitoring and warning updates for extreme heatwave conditions.</p>
 
-                <!-- Task 5: Card Layout using CSS Box Model -->
                 <div class="feature-card">
                     <h3>Severe Warning</h3>
-                    <p>Vidarbha & Marathwada recorded 47°C, 6°C above normal baseline.</p>
+                    <p>Vidarbha &amp; Marathwada recorded 47°C, 6°C above normal baseline.</p>
                     <a href="alert-details.html">View Details &raquo;</a>
                 </div>
-
                 <div class="feature-card">
                     <h3>Forecast Summary</h3>
                     <p>Weekly regional weather forecast for July 2026.</p>
@@ -155,12 +67,8 @@
             </main>
         </div>
 
-        <!-- Task 3: Common Footer Styling -->
-        <footer class="site-footer">
-            <p>Heatwave Intelligence System &copy; 2026</p>
-        </footer>
-
+        <footer class="site-footer"><p>Heatwave Intelligence System &copy; 2026</p></footer>
     </div>
-
+    <script type="module" src="js/site.js"></script>
 </body>
 </html>

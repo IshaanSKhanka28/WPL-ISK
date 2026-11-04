@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!-- Experiment 1 / Task 9 - Media & frames: video, audio, iframe (Google Map, IMD site) and noscript.
+     Put the media files in the media/ folder (heatwave_awareness.mp4, heatwave_advisory.mp3). -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heatwave Media &amp; Awareness Page - Heatwave Intelligence System</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="media">
+    <div class="page-container">
+
+        <header class="site-header">
+            <span class="portal-badge">Public Awareness &bull; Media Center</span>
+            <h1>Heatwave Intelligence System</h1>
+            <p>Infographics, audio advisories, educational videos, and critical safety guidelines during extreme summer heat.</p>
+            <nav class="navbar-container" data-site-nav></nav>
+        </header>
+
+        <div class="main-layout">
+            <aside class="sidebar">
+                <div class="sidebar-card">
+                    <h3>Media Navigation</h3>
+                    <ul class="sidebar-list">
+                        <li><a href="#video-sec">Awareness Video</a></li>
+                        <li><a href="#audio-sec">Audio Advisory</a></li>
+                        <li><a href="#map-sec">Location Map</a></li>
+                        <li><a href="#imd-sec">IMD Live Portal</a></li>
+                        <li><a href="navigation.html">Portal Helplines</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <main class="main-content">
+                <div class="highlight-offer-box">
+                    <h2>&#128364; Special Live Broadcast Bulletin</h2>
+                    <p>Listen to real-time audio announcements and watch safety protocols for peak heat conditions.
+                       This bulletin is updated for the current July 2026 heatwave advisory.</p>
+                </div>
+
+                <h2>Heatwave Awareness - Media Center</h2>
+                <hr class="rule">
+
+                <div id="video-sec" class="media-box">
+                    <h3>Heatwave Awareness Video</h3>
+                    <div class="image-gallery">
+                        <video class="responsive-media-frame" controls>
+                            <source src="media/heatwave_awareness.mp4" type="video/mp4">
+                            <source src="media/heatwave_awareness.ogg" type="video/ogg">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
+                <div id="audio-sec" class="media-box">
+                    <h3>Heatwave Advisory - Audio Announcement</h3>
+                    <audio controls autoplay loop>
+                        <source src="media/heatwave_advisory.mp3" type="audio/mpeg">
+                        <source src="media/heatwave_advisory.ogg" type="audio/ogg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div id="map-sec" class="media-box">
+                    <h3>Location Map</h3>
+                    <iframe class="responsive-media-frame" src="https://www.google.com/maps?q=New+Delhi&output=embed"
+                            height="450" title="Google Map - New Delhi" allowfullscreen loading="lazy"></iframe>
+                </div>
+
+                <div id="imd-sec" class="media-box">
+                    <h3>IMD Website (Embedded)</h3>
+                    <iframe class="responsive-media-frame" src="https://mausam.imd.gov.in/mumbai/#." height="500" title="IMD Website"></iframe>
+                </div>
+
+                <noscript>
+                    <p class="noscript-warning">
+                        JavaScript is disabled in your browser. Some interactive features of this Heatwave Awareness
+                        Portal may not work correctly. Please enable JavaScript for the best experience.
+                    </p>
+                </noscript>
+            </main>
+        </div>
+
+        <footer class="site-footer"><p>Heatwave Intelligence System &copy; 2026</p></footer>
+    </div>
+    <script type="module" src="js/site.js"></script>
+</body>
+</html>

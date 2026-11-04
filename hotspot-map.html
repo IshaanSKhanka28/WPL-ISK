@@ -1,160 +1,56 @@
 <!DOCTYPE html>
+<!-- Experiment 1 / Task 6 - Hotspot map: image and image map with clickable regions. -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotspot Map - Heatwave Intelligence System</title>
-    <!-- Task 3: External CSS Links -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="layout.css">
-    <!-- Task 6: Nav & Image Styling CSS -->
-    <link rel="stylesheet" href="nav.css">
-    <link rel="stylesheet" href="table.css">
-    <link rel="stylesheet" href="form.css">
-    
-    <!-- Task 2: Internal CSS for Navigation Menu & Task 10 Highlight Box -->
-    <style>
-        .portal-nav-list {
-            list-style: none; /* Task 2 requirement */
-            margin: 0;
-            padding: 0;
-        }
-
-        .portal-nav-list li {
-            display: inline-block; /* Task 2 requirement */
-            margin-right: 5px;
-        }
-
-        .portal-nav-list li a {
-            color: #ffffff; /* Task 2 requirement */
-            text-decoration: none; /* Task 2 requirement */
-            padding: 6px 12px;
-            display: inline-block;
-        }
-
-        .portal-nav-list li a:hover,
-        .portal-nav-list li a.active { /* Task 2 requirement */
-            background-color: #bf360c;
-            color: #ffffff;
-        }
-
-        /* Task 10: Clean Heatwave Advisory Box Styling */
-        .highlight-offer-box {
-            background-color: #fff3e0;
-            border: 1px solid #ffe0b2;
-            border-left: 5px solid #d84315;
-            color: #333333;
-            padding: 14px 18px;
-            border-radius: 6px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 6px rgba(216, 67, 21, 0.12);
-            animation: gentle-glow 3s infinite ease-in-out;
-        }
-
-        .highlight-offer-box h2 {
-            color: #d84315;
-            font-size: 16px;
-            font-weight: bold;
-            margin: 0 0 5px 0;
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-
-        .highlight-offer-box p {
-            color: #444444;
-            font-size: 14px;
-            margin: 0;
-        }
-
-        @keyframes gentle-glow {
-            0% {
-                box-shadow: 0 2px 6px rgba(216, 67, 21, 0.12);
-            }
-            50% {
-                box-shadow: 0 4px 12px rgba(216, 67, 21, 0.25);
-            }
-            100% {
-                box-shadow: 0 2px 6px rgba(216, 67, 21, 0.12);
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-
+<body data-page="hotspot-map">
     <div class="page-container">
 
-        <!-- Task 1: Inline CSS on Header -->
-        <header class="site-header" style="background-color: #ffe0b2; padding: 15px; border: 1px solid #d84315; border-radius: 4px;">
-            <h1 style="color: #d84315; text-align: center; margin: 0;">Heatwave Intelligence System</h1>
-            <p style="text-align: center; color: #333333; margin: 5px 0;">Regional Heatwave Hotspot Map</p>
-            
-            <!-- Task 2: Internal CSS styled Navbar -->
-            <nav class="navbar-container">
-                <ul class="portal-nav-list">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about-system.html">About System</a></li>
-                    <li><a href="alert-details.html">Alert Details</a></li>
-                    <li><a href="forecast.html">Forecast Results</a></li>
-                    <li><a href="hotspot-map.html" class="active">Hotspot Map</a></li>
-                    <li><a href="sources.html">Data Sources</a></li>
-                    <li><a href="subscribe.html">Subscribe</a></li>
-                    <li><a href="Heatwave.html">Media Center</a></li>
-                    <li><a href="Navigation.html">Navigation Menu</a></li>
-                </ul>
-            </nav>
+        <header class="site-header">
+            <span class="portal-badge">Spatial Telemetry &bull; Vulnerability Mapping</span>
+            <h1>Heatwave Intelligence System</h1>
+            <p>Geographic mapping of high-vulnerability thermal zones, urban heat islands, and monitoring clusters.</p>
+            <nav class="navbar-container" data-site-nav></nav>
         </header>
 
-        <!-- Task 9: Page Layout (Sidebar left, Content right) -->
         <div class="main-layout">
-            
-            <!-- Task 4: Sidebar Card -->
             <aside class="sidebar">
                 <div class="sidebar-card">
                     <h3>Regional Zones</h3>
                     <ul class="sidebar-list">
                         <li><a href="https://en.wikipedia.org/wiki/North_India" target="_blank">North Zone</a></li>
                         <li><a href="https://en.wikipedia.org/wiki/South_India" target="_blank">South Zone</a></li>
-                        <li><a href="Heatwave.html">Media Awareness</a></li>
-                        <li><a href="Navigation.html">Portal Helplines</a></li>
+                        <li><a href="media.html">Media Awareness</a></li>
+                        <li><a href="navigation.html">Portal Helplines</a></li>
                     </ul>
                 </div>
             </aside>
 
-            <!-- Main Content Area -->
             <main class="main-content">
-                <!-- Task 10: Heatwave Emergency Highlight Box -->
                 <div class="highlight-offer-box">
                     <h2>&#9888; Live Heatwave Hotspot Watch</h2>
-                    <p style="margin: 0; font-size: 16px;">
-                        Interactive zone tracking for extreme temperature hotspots.
-                    </p>
+                    <p>Interactive zone tracking for extreme temperature hotspots.</p>
                 </div>
 
                 <h2>Regional Heatwave Map</h2>
-                
-                <!-- Task 6: Original photo map.jpg with hover zoom and border styling -->
-                <div style="text-align: center; margin: 20px 0;">
-                    <img src="map.jpg"
-                         usemap="#region"
-                         width="50%"
-                         height="50%"
-                         alt="Regional Map"
-                         class="map-image">
+
+                <div class="map-wrapper">
+                    <img src="map.jpg" usemap="#region" width="50%" height="50%" alt="Regional Map" class="map-image">
                 </div>
 
                 <map name="region">
-                    <area shape="rect" coords="0,0,1000,500" href="https://en.wikipedia.org/wiki/North_India">
-                    <area shape="rect" coords="0,500,1000,1000" href="https://en.wikipedia.org/wiki/South_India">
+                    <area shape="rect" coords="0,0,1000,500" href="https://en.wikipedia.org/wiki/North_India" alt="Region A - North Zone">
+                    <area shape="rect" coords="0,500,1000,1000" href="https://en.wikipedia.org/wiki/South_India" alt="Region B - South Zone">
                 </map>
             </main>
         </div>
 
-        <!-- Task 3: Common Footer -->
-        <footer class="site-footer">
-            <p>Heatwave Intelligence System &copy; 2026</p>
-        </footer>
-
+        <footer class="site-footer"><p>Heatwave Intelligence System &copy; 2026</p></footer>
     </div>
-
+    <script type="module" src="js/site.js"></script>
 </body>
 </html>

@@ -1,113 +1,23 @@
 <!DOCTYPE html>
+<!-- Experiment 1 / Task 7 - Forecast summary: table with caption, thead, tbody, tfoot and merged header cells. -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heatwave Intelligence System - Forecast Summary</title>
-    <!-- Task 3: External CSS Links -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="layout.css">
-    <link rel="stylesheet" href="nav.css">
-    <!-- Task 7: Table Styling Deliverable CSS -->
-    <link rel="stylesheet" href="table.css">
-    <link rel="stylesheet" href="form.css">
-    
-    <!-- Task 2: Internal CSS for Navigation Menu & Task 10 Highlight Box -->
-    <style>
-        .portal-nav-list {
-            list-style: none; /* Task 2 requirement */
-            margin: 0;
-            padding: 0;
-        }
-
-        .portal-nav-list li {
-            display: inline-block; /* Task 2 requirement */
-            margin-right: 5px;
-        }
-
-        .portal-nav-list li a {
-            color: #ffffff; /* Task 2 requirement */
-            text-decoration: none; /* Task 2 requirement */
-            padding: 6px 12px;
-            display: inline-block;
-        }
-
-        .portal-nav-list li a:hover,
-        .portal-nav-list li a.active { /* Task 2 requirement */
-            background-color: #bf360c;
-            color: #ffffff;
-        }
-
-        /* Task 10: Clean Heatwave Advisory Box Styling */
-        .highlight-offer-box {
-            background-color: #fff3e0;
-            border: 1px solid #ffe0b2;
-            border-left: 5px solid #d84315;
-            color: #333333;
-            padding: 14px 18px;
-            border-radius: 6px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 6px rgba(216, 67, 21, 0.12);
-            animation: gentle-glow 3s infinite ease-in-out;
-        }
-
-        .highlight-offer-box h2 {
-            color: #d84315;
-            font-size: 16px;
-            font-weight: bold;
-            margin: 0 0 5px 0;
-            border-bottom: none;
-            padding-bottom: 0;
-        }
-
-        .highlight-offer-box p {
-            color: #444444;
-            font-size: 14px;
-            margin: 0;
-        }
-
-        @keyframes gentle-glow {
-            0% {
-                box-shadow: 0 2px 6px rgba(216, 67, 21, 0.12);
-            }
-            50% {
-                box-shadow: 0 4px 12px rgba(216, 67, 21, 0.25);
-            }
-            100% {
-                box-shadow: 0 2px 6px rgba(216, 67, 21, 0.12);
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-
+<body data-page="forecast">
     <div class="page-container">
 
-        <!-- Task 1: Inline CSS on Header -->
-        <header class="site-header" style="background-color: #ffe0b2; padding: 15px; border: 1px solid #d84315; border-radius: 4px;">
-            <h1 style="color: #d84315; text-align: center; margin: 0;">Heatwave Intelligence System</h1>
-            <p style="text-align: center; color: #333333; margin: 5px 0;">Region-wise Temperature & Forecast Results</p>
-            
-            <!-- Task 2: Internal CSS styled Navbar -->
-            <nav class="navbar-container">
-                <ul class="portal-nav-list">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about-system.html">About System</a></li>
-                    <li><a href="alert-details.html">Alert Details</a></li>
-                    <li><a href="forecast.html" class="active">Forecast Results</a></li>
-                    <li><a href="hotspot-map.html">Hotspot Map</a></li>
-                    <li><a href="sources.html">Data Sources</a></li>
-                    <li><a href="subscribe.html">Subscribe</a></li>
-                    <li><a href="Heatwave.html">Media Center</a></li>
-                    <li><a href="Navigation.html">Navigation Menu</a></li>
-                </ul>
-            </nav>
+        <header class="site-header">
+            <span class="portal-badge">Meteorological Forecast &bull; Predictive Analytics</span>
+            <h1>Heatwave Intelligence System</h1>
+            <p>Region-wise ambient temperature trajectories, statistical analysis, and 5-day heatwave forecasting.</p>
+            <nav class="navbar-container" data-site-nav></nav>
         </header>
 
-        <!-- Task 9: Page Layout (Sidebar left, Content right) -->
         <div class="main-layout">
-            
-            <!-- Task 4: Sidebar Card -->
             <aside class="sidebar">
                 <div class="sidebar-card">
                     <h3>Filter Region</h3>
@@ -116,23 +26,18 @@
                         <li><a href="#">Central Zone</a></li>
                         <li><a href="#">Western Zone</a></li>
                         <li><a href="#">Coastal Zone</a></li>
-                        <li><a href="Heatwave.html">Media Awareness</a></li>
-                        <li><a href="Navigation.html">Portal Helplines</a></li>
+                        <li><a href="media.html">Media Awareness</a></li>
+                        <li><a href="navigation.html">Portal Helplines</a></li>
                     </ul>
                 </div>
             </aside>
 
-            <!-- Main Content Area -->
             <main class="main-content">
-                <!-- Task 10: Heatwave Advisory Highlight Box -->
                 <div class="highlight-offer-box">
                     <h2>&#9888; Weekly Regional Heatwave Forecast</h2>
-                    <p style="margin: 0; font-size: 16px;">
-                        Live data compiled from Automatic Weather Stations (AWS) network.
-                    </p>
+                    <p>Live data compiled from Automatic Weather Stations (AWS) network.</p>
                 </div>
 
-                <!-- Task 7: Table Styling for Price / Forecast List (table.css deliverable) -->
                 <table>
                     <caption>Heatwave Forecast Summary - Week of 27 July 2026</caption>
                     <thead>
@@ -147,48 +52,20 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>North Zone</td>
-                            <td>Delhi AWS</td>
-                            <td>46&deg;C</td>
-                            <td>Severe Heatwave</td>
-                        </tr>
-                        <tr>
-                            <td>Central Zone</td>
-                            <td>Nagpur AWS</td>
-                            <td>44&deg;C</td>
-                            <td>Heatwave</td>
-                        </tr>
-                        <tr>
-                            <td>Western Zone</td>
-                            <td>Rajkot AWS</td>
-                            <td>45&deg;C</td>
-                            <td>Severe Heatwave</td>
-                        </tr>
-                        <tr>
-                            <td>Coastal Zone</td>
-                            <td>Chennai AWS</td>
-                            <td>37&deg;C</td>
-                            <td>Normal</td>
-                        </tr>
+                        <tr><td>North Zone</td><td>Delhi AWS</td><td>46&deg;C</td><td>Severe Heatwave</td></tr>
+                        <tr><td>Central Zone</td><td>Nagpur AWS</td><td>44&deg;C</td><td>Heatwave</td></tr>
+                        <tr><td>Western Zone</td><td>Rajkot AWS</td><td>45&deg;C</td><td>Severe Heatwave</td></tr>
+                        <tr><td>Coastal Zone</td><td>Chennai AWS</td><td>37&deg;C</td><td>Normal</td></tr>
                     </tbody>
                     <tfoot>
-                        <tr>
-                            <td colspan="2">Highest Recorded</td>
-                            <td>46&deg;C</td>
-                            <td>Severe Heatwave</td>
-                        </tr>
+                        <tr><td colspan="2">Highest Recorded</td><td>46&deg;C</td><td>Severe Heatwave</td></tr>
                     </tfoot>
                 </table>
             </main>
         </div>
 
-        <!-- Task 3: Common Footer -->
-        <footer class="site-footer">
-            <p>Heatwave Intelligence System &copy; 2026</p>
-        </footer>
-
+        <footer class="site-footer"><p>Heatwave Intelligence System &copy; 2026</p></footer>
     </div>
-
+    <script type="module" src="js/site.js"></script>
 </body>
 </html>

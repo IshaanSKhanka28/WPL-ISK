@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!-- Experiment 4 / Task 1 - Heatwave monitoring form: HTML5 input types, labels, fieldset, legend, required fields.
+     Experiment 4 / Tasks 2-5 - JavaScript validation lives in js/heatwave-validation.js. -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heatwave Monitoring Form Validation</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/monitoring-form.css">
+</head>
+<body data-page="heatwave-form">
+    <div class="page-container">
+
+        <header class="site-header">
+            <span class="portal-badge">Telemetry Intake &bull; Observer Reporting</span>
+            <h1>Heatwave Intelligence System</h1>
+            <p>Climate Intelligence &amp; Heatwave Early Warning Portal &bull; Daily Meteorological Observation Registry</p>
+            <nav class="navbar-container" data-site-nav></nav>
+        </header>
+
+        <div class="main-layout">
+            <aside class="sidebar">
+                <div class="sidebar-card">
+                    <h3>Quick Links</h3>
+                    <ul class="sidebar-list">
+                        <li><a href="#form-section">Heatwave Form</a></li>
+                        <li><a href="alert-details.html">Alert Levels</a></li>
+                        <li><a href="forecast.html">Forecast Summary</a></li>
+                        <li><a href="media.html">Awareness Media</a></li>
+                        <li><a href="navigation.html">Portal Helplines</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <main class="main-content">
+                <div class="highlight-offer-box banner-sm">
+                    <h2>⚠ Heatwave Monitoring Validation</h2>
+                    <p>Validate real-time climate observations before submission to ensure the data is complete, formatted correctly, and safe for decision-making.</p>
+                </div>
+
+                <h2 id="form-section">Heatwave Monitoring Form</h2>
+
+                <div class="form-wrapper">
+                    <!-- novalidate: the custom JavaScript validation replaces the browser's default messages -->
+                    <form id="heatwaveForm" novalidate>
+
+                        <fieldset>
+                            <legend>Observer &amp; Contact Details</legend>
+                            <div class="field-group">
+                                <label for="observerName">Observer Name</label>
+                                <input type="text" id="observerName" name="observerName" placeholder="Enter full name" required>
+                                <span class="error-message" id="observerNameError" aria-live="polite"></span>
+                            </div>
+                            <div class="field-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="name@example.com" required>
+                                <span class="error-message" id="emailError" aria-live="polite"></span>
+                            </div>
+                            <div class="field-group">
+                                <label for="mobile">Mobile Number</label>
+                                <input type="tel" id="mobile" name="mobile" placeholder="10-digit Indian mobile number" required>
+                                <span class="error-message" id="mobileError" aria-live="polite"></span>
+                            </div>
+                            <div class="field-group">
+                                <label for="awsStationId">AWS Station ID</label>
+                                <input type="text" id="awsStationId" name="awsStationId" placeholder="Example: AWS001" required>
+                                <span class="error-message" id="awsStationIdError" aria-live="polite"></span>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Observation Details</legend>
+                            <div class="field-group">
+                                <label for="location">Location</label>
+                                <input type="text" id="location" name="location" placeholder="Enter monitoring location" required>
+                                <span class="error-message" id="locationError" aria-live="polite"></span>
+                            </div>
+                            <div class="field-group">
+                                <label for="observationDate">Observation Date</label>
+                                <input type="date" id="observationDate" name="observationDate" required>
+                                <span class="error-message" id="observationDateError" aria-live="polite"></span>
+                            </div>
+                            <div class="field-group">
+                                <label for="temperature">Maximum Temperature (°C)</label>
+                                <input type="number" id="temperature" name="temperature" step="0.1" min="0" max="60" placeholder="Enter temperature" required>
+                                <span class="error-message" id="temperatureError" aria-live="polite"></span>
+                            </div>
+                            <div class="field-group">
+                                <label for="humidity">Humidity (%)</label>
+                                <input type="number" id="humidity" name="humidity" step="1" min="0" max="100" placeholder="Enter humidity percentage" required>
+                                <span class="error-message" id="humidityError" aria-live="polite"></span>
+                            </div>
+                            <div class="field-group">
+                                <label for="alertLevel">Heatwave Alert Level</label>
+                                <select id="alertLevel" name="alertLevel" required>
+                                    <option value="">-- Select Alert Level --</option>
+                                    <option value="Normal">Normal</option>
+                                    <option value="Moderate">Moderate</option>
+                                    <option value="Severe">Severe</option>
+                                    <option value="Extreme">Extreme</option>
+                                </select>
+                                <span class="error-message" id="alertLevelError" aria-live="polite"></span>
+                            </div>
+                        </fieldset>
+
+                        <div class="form-actions">
+                            <button type="submit" class="submit-btn">Validate &amp; Submit</button>
+                            <button type="reset" class="reset-btn">Reset</button>
+                        </div>
+
+                        <div id="formSuccess" class="success-message" hidden>Monitoring data submitted successfully. The heatwave alert record is valid.</div>
+                    </form>
+                </div>
+            </main>
+        </div>
+
+        <footer class="site-footer"><p>Heatwave Intelligence System &copy; 2026</p></footer>
+    </div>
+    <script type="module" src="js/site.js"></script>
+    <script type="module" src="js/heatwave-validation.js"></script>
+</body>
+</html>

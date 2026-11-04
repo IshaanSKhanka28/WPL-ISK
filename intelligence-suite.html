@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- Experiment 5 - JavaScript Programming for Climate Intelligence: Tasks 1-6 on one page.
+     Every module mounts one widget from js/tasks/ (the same widgets are reused on the portal pages). -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligence Suite: JavaScript Climate Intelligence Suite</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="intelligence-suite">
+    <div class="page-container">
+
+        <header class="site-header">
+            <span class="portal-badge">Analytical Engine &bull; Climate Operations</span>
+            <h1 id="systemName">Heatwave Intelligence System</h1>
+            <p>JavaScript Real-Time Computational Intelligence – Meteorological Analysis, Risk Engine &amp; Telemetry Ingestion.</p>
+            <nav class="navbar-container" data-site-nav></nav>
+        </header>
+
+        <div class="main-layout">
+            <aside class="sidebar">
+                <div class="sidebar-card">
+                    <h3>Quick Navigation</h3>
+                    <ul class="sidebar-list">
+                        <li><a href="index.html">Home Overview</a></li>
+                        <li><a href="alert-details.html">Alert Bulletins</a></li>
+                        <li><a href="forecast.html">Forecast Tables</a></li>
+                        <li><a href="about-system.html">About System</a></li>
+                        <li><a href="climate-alert.html">Climate Alert</a></li>
+                        <li><a href="react-app/">Climate Stations</a></li>
+                        <li><a href="subscribe.html">Citizen Registration</a></li>
+                        <li><a href="navigation.html">Navigation Center</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-card">
+                    <h3>Regional Categories</h3>
+                    <ul class="sidebar-list">
+                        <li><a href="forecast.html">North Zone</a></li>
+                        <li><a href="forecast.html">Central Zone</a></li>
+                        <li><a href="forecast.html">Western Zone</a></li>
+                        <li><a href="forecast.html">Coastal Zone</a></li>
+                        <li><a href="media.html">Media Awareness</a></li>
+                        <li><a href="navigation.html">Portal Helplines</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-card">
+                    <h3>Helplines &amp; Resources</h3>
+                    <ul class="sidebar-list">
+                        <li><a href="https://mausam.imd.gov.in" target="_blank">IMD Official Site</a></li>
+                        <li><a href="mailto:coordinator@gmail.com">Coordinator Email</a></li>
+                        <li><a href="tel:+911234567890">Disaster Helpline</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <main class="main-content">
+                <div class="highlight-offer-box brand banner-md">
+                    <h2>&#9888; Climate Intelligence Operations Suite</h2>
+                    <p>Interactive operations suite uniting 6 core analytical engines: temperature variance evaluation, automated risk classification, structured station telemetry, historical time-series statistics, and schema-validated citizen registration.</p>
+                </div>
+
+                <!-- Task 1 - heatwave_analysis -->
+                <section id="task1" class="task-section">
+                    <div class="task-header"><h2>Module 1: Real-Time Temperature Variance Analysis</h2><span class="task-badge-label">Operational Module</span></div>
+                    <p class="task-intro">Accept the current temperature and threshold temperature of a location to calculate variance (&Delta;T) and determine heatwave conditions using arithmetic and relational operators:</p>
+                    <div data-task="temperature-analysis"></div>
+                </section>
+
+                <!-- Task 2 - heatwave_warning -->
+                <section id="task2" class="task-section">
+                    <div class="task-header"><h2>Module 2: Multi-Factor Heatwave Risk Decision Engine</h2><span class="task-badge-label">Operational Module</span></div>
+                    <p class="task-intro">Evaluates multi-factor warning levels using JavaScript conditional logic (<code>if...else if...else</code>), relational operators (<code>&gt;, &lt;, &gt;=, &lt;=</code>), and logical operators (<code>&amp;&amp;, ||</code>):</p>
+                    <div data-task="risk-decision"></div>
+                </section>
+
+                <!-- Task 3 - climate_object -->
+                <section id="task3" class="task-section">
+                    <div class="task-header"><h2>Module 3: Automated Weather Station (AWS) Telemetry Model</h2><span class="task-badge-label">Operational Module</span></div>
+                    <p class="task-intro">Models a monitored climate station as an object-literal structure with properties and member functions using the <code>this</code> keyword:</p>
+                    <div data-task="climate-object"></div>
+                </section>
+
+                <!-- Task 4 - temperature_analysis -->
+                <section id="task4" class="task-section">
+                    <div class="task-header"><h2>Module 4: Historical Time-Series Meteorological Analysis</h2><span class="task-badge-label">Operational Module</span></div>
+                    <p class="task-intro">Stores regular time-series environmental readings in a JavaScript array and performs statistical analysis using array traversal, filtering, and reduction:</p>
+                    <div data-task="temperature-array"></div>
+                </section>
+
+                <!-- Tasks 5 & 6 - climate_validation -->
+                <section id="task5" class="task-section">
+                    <div class="task-header"><h2>Modules 5 &amp; 6: Observer Registration &amp; Telemetry Validation Portal</h2><span class="task-badge-label">Operational Module</span></div>
+                    <p class="task-intro">Collects user and climate alert preferences. Validates input values using dedicated JavaScript validation functions, Regular Expressions, and DOM submit handling:</p>
+                    <div data-task="registration-validation"></div>
+                </section>
+            </main>
+        </div>
+
+        <footer class="site-footer"><p>Heatwave Intelligence System &copy; 2026 | Intelligence Suite Master Suite</p></footer>
+    </div>
+    <script type="module" src="js/site.js"></script>
+</body>
+</html>
