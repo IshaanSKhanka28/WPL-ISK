@@ -1,0 +1,54 @@
+/* ==========================================================================
+   Experiment 4 - Heatwave monitoring form (heatwave-form.html)
+   Form styles that differ from the shared theme (css/style.css).
+   ========================================================================== */
+.form-wrapper {
+    max-width: 700px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+fieldset {
+    margin-bottom: 18px;
+    border: 1px solid #f0c7a8;
+    border-radius: 6px;
+    padding: 15px;
+    background-color: #fffaf5;
+}
+legend { font-weight: bold; color: #b23b00; padding: 0 8px; }
+
+.field-group { margin-bottom: 15px; }
+label { font-weight: bold; margin-bottom: 6px; color: #333333; }
+
+input, select, button {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    border-radius: 5px;
+    border: 1px solid #d2cfcf;
+    font-size: 15px;
+}
+input:focus, select:focus { border-color: #d84315; outline: 2px solid rgba(216, 67, 21, 0.15); }
+
+.error-message { display: block; color: #b00020; font-size: 13px; font-weight: normal; margin-top: 6px; min-height: 18px; }
+.success-message {
+    display: block;
+    margin-top: 15px;
+    padding: 12px 14px;
+    border-radius: 5px;
+    background-color: #e8f5e9;
+    border: 1px solid #66bb6a;
+    color: #1b5e20;
+    font-weight: bold;
+}
+
+.form-actions { display: flex; gap: 12px; margin-top: 10px; }
+.form-actions button { cursor: pointer; transition: 0.3s ease; }
+.submit-btn { background-color: #d84315; color: #ffffff; border: none; }
+.submit-btn:hover { background-color: #bf360c; }
+.reset-btn { background-color: #f2f2f2; color: #333333; }
+.reset-btn:hover { background-color: #e0e0e0; }

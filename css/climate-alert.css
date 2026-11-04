@@ -1,0 +1,137 @@
+/* ==========================================================================
+   jQuery experiment - Climate Alert page (climate-alert.html)
+   Only the rules that differ from the shared theme (css/style.css).
+   ========================================================================== */
+* { margin: 0; padding: 0; }
+
+body { line-height: 1.5; padding: 24px 16px 48px; }
+
+header.site-header { max-width: 860px; margin: 0 auto 24px; }
+header.site-header h1 { line-height: 1.25; }
+header.site-header p { max-width: 720px; }
+.portal-badge { border-color: rgba(255, 255, 255, 0.3); }
+.navbar-container { margin-top: 14px; }
+
+.container { max-width: 860px; margin: 0 auto; }
+
+.form-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 32px 28px;
+    box-shadow: var(--shadow);
+}
+
+fieldset { padding: 20px 24px 24px; margin-bottom: 24px; }
+
+legend {
+    font-size: 15px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: transparent;
+}
+
+.form-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px 20px; margin-top: 8px; }
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+
+label { display: flex; align-items: center; gap: 4px; }
+.required-star { color: var(--error); font-weight: bold; }
+.input-hint { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+
+/* Validation states (toggled by js/climate-alert.js) */
+input.input-error,
+select.input-error {
+    border-color: var(--error) !important;
+    background-color: var(--error-bg);
+    box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.12) !important;
+}
+input.input-success,
+select.input-success { border-color: var(--success); background-color: #fcfdfc; }
+
+.error-msg { color: var(--error); font-size: 12px; font-weight: 600; margin-top: 3px; min-height: 16px; display: none; }
+
+.radio-options-wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 10px 14px;
+    background-color: #ffffff;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 8px;
+    min-height: 42px;
+}
+.radio-options-wrapper.input-error { border-color: var(--error); background-color: var(--error-bg); }
+
+.radio-option {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--text-main);
+}
+.radio-option input[type="radio"] { accent-color: var(--primary); width: 17px; height: 17px; cursor: pointer; }
+
+.button-bar { display: flex; gap: 14px; margin-top: 10px; justify-content: flex-end; }
+
+/* Success card */
+#submissionSuccessCard {
+    display: none;
+    margin-top: 24px;
+    background-color: var(--success-bg);
+    border: 1.5px solid var(--success-border);
+    border-radius: var(--radius);
+    padding: 24px;
+    box-shadow: var(--shadow);
+    animation: fadeIn 0.3s ease-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.success-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+.success-icon-badge {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--success);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+.success-title { color: #14532d; font-size: 18px; font-weight: 700; }
+.success-subtitle { color: #166534; font-size: 13px; }
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 16px;
+    background: #ffffff;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid #dcfce7;
+    margin-top: 12px;
+    font-size: 13px;
+}
+.summary-item strong { color: #0f172a; }
+.summary-item.wide { grid-column: 1 / -1; }
+
+.badge-alert { display: inline-block; padding: 2px 8px; border-radius: 4px; font-weight: 700; font-size: 11px; text-transform: uppercase; }
+.badge-alert.badge-normal { background: #dcfce7; color: #15803d; border: none; }
+.badge-yellow { background: #fef08a; color: #854d0e; }
+.badge-orange { background: #ffedd5; color: #c2410c; }
+.badge-red    { background: #fee2e2; color: #b91c1c; }
+
+@media (max-width: 640px) {
+    .form-grid, .summary-grid { grid-template-columns: 1fr; }
+    .radio-options-wrapper { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .button-bar { flex-direction: column-reverse; }
+    .btn { width: 100%; }
+}

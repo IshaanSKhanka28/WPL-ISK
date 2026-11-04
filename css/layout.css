@@ -1,0 +1,33 @@
+/* ==========================================================================
+   Experiment 2 / Task 9 - Page layout: header, left sidebar, content, footer
+   ========================================================================== */
+.page-container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.main-layout {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+aside.sidebar {
+    width: 270px;
+    flex-shrink: 0;
+}
+
+main.main-content {
+    flex-grow: 1;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px 24px;
+    box-shadow: var(--shadow);
+}
+
+@media (max-width: 768px) {
+    .main-layout { flex-direction: column; }
+    aside.sidebar { width: 100%; }
+}

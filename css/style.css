@@ -1,0 +1,108 @@
+/* ==========================================================================
+   Experiment 2 / Task 3 - External CSS for the whole website theme
+   Linked by every page. Holds the design tokens, body font, headings,
+   links and footer; the other Expt 2 task files are pulled in below.
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import './header.css';      /* Task 1  - header                         */
+@import './nav.css';         /* Task 2  - navigation menu, Task 6 - gallery */
+@import './layout.css';      /* Task 9  - header / sidebar / content / footer */
+@import './cards.css';       /* Tasks 4 & 5 - sidebar card, content cards */
+@import './effects.css';     /* Task 10 - glowing advisory box           */
+@import './form.css';        /* Task 8  - forms and buttons              */
+@import './table.css';       /* Task 7  - tables                         */
+@import './components.css';  /* Experiment 5 - JavaScript task widgets   */
+
+:root {
+    --primary: #c2410c;
+    --primary-hover: #9a3412;
+    --primary-light: #fff7ed;
+    --primary-gradient: linear-gradient(135deg, #7c2d12 0%, #ea580c 50%, #f97316 100%);
+    --secondary: #0f172a;
+    --surface: #ffffff;
+    --bg: #f8fafc;
+    --border: #e2e8f0;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --error: #dc2626;
+    --error-bg: #fef2f2;
+    --success: #16a34a;
+    --success-bg: #f0fdf4;
+    --success-border: #86efac;
+    --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+    --shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+    --radius: 12px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg);
+    color: var(--text-main);
+    margin: 0;
+    padding: 20px 16px 40px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Headings, text and links */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-main);
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+h1 { font-size: 24px; }
+h2 {
+    font-size: 20px;
+    color: var(--primary);
+    border-bottom: 2px solid #ffedd5;
+    padding-bottom: 8px;
+    margin-top: 8px;
+}
+h3 { font-size: 16px; }
+
+p { margin-bottom: 12px; color: #334155; }
+
+a { color: var(--primary); text-decoration: none; transition: color 0.2s ease; }
+a:hover { color: var(--primary-hover); text-decoration: underline; }
+a.accent { color: #d84315; font-weight: bold; }   /* in-text links on the About page */
+a.accent.plain { font-weight: normal; }
+
+mark {
+    background-color: #ffe0b2;
+    color: #d84315;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+blockquote {
+    font-style: italic;
+    margin: 15px 0;
+    padding: 12px 18px 12px 15px;
+    border-left: 3px solid #d84315;
+    background-color: #fff7ed;
+    border-radius: 0 8px 8px 0;
+    color: #555555;
+}
+
+.disclaimer { display: block; margin-top: 20px; color: #666666; }
+
+dt { font-weight: bold; color: #d84315; margin-top: 10px; }
+dd { margin-left: 20px; margin-bottom: 5px; }
+
+/* Common footer (Task 3) */
+footer.site-footer {
+    background: var(--secondary);
+    color: #94a3b8;
+    padding: 24px;
+    text-align: center;
+    border-radius: var(--radius);
+    margin-top: 36px;
+    border-top: 4px solid var(--primary);
+    box-shadow: var(--shadow);
+}
+footer.site-footer p { margin: 4px 0; color: #94a3b8; font-size: 13.5px; }
+footer.site-footer a { color: #fb923c; font-weight: 600; }

@@ -1,0 +1,108 @@
+/* ==========================================================================
+   Experiment 2 / Task 8 - Forms: fieldset, legend, inputs (:focus), buttons (:hover)
+   ========================================================================== */
+fieldset {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fafbfc;
+}
+
+legend {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 14.5px;
+    padding: 0 8px;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    height: 42px;
+    padding: 8px 14px;
+    font-family: inherit;
+    font-size: 14px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: var(--text-main);
+    transition: all 0.2s ease-in-out;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(194, 65, 12, 0.15);
+}
+
+/* Radio buttons and checkboxes sit on one line with their label */
+.inline-option { display: inline-block; margin-right: 16px; }
+.inline-option label { display: inline; margin: 0 0 0 4px; font-weight: 500; }
+
+/* Buttons */
+.btn,
+button,
+button[type="submit"],
+button[type="reset"] {
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+button[type="submit"],
+.btn-submit,
+.btn-primary {
+    background-color: var(--primary);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(194, 65, 12, 0.25);
+}
+button[type="submit"]:hover,
+.btn-submit:hover,
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(194, 65, 12, 0.35);
+}
+
+button[type="reset"],
+.btn-reset,
+.btn-secondary {
+    background-color: #e2e8f0;
+    color: #334155;
+}
+button[type="reset"]:hover,
+.btn-reset:hover,
+.btn-secondary:hover {
+    background-color: #cbd5e1;
+    color: #0f172a;
+}

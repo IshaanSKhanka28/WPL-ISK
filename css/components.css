@@ -1,0 +1,220 @@
+/* ==========================================================================
+   Experiment 5 - Styles for the JavaScript task widgets (js/tasks/*.js)
+   Used on the pages that mount a widget and on the Intelligence Suite page.
+   ========================================================================== */
+
+/* ----- Widget containers ------------------------------------------------ */
+.task-intro { font-size: 14px; margin-bottom: 12px; }
+
+.task-section {                     /* one module on the Intelligence Suite page */
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+.task-header {
+    border-bottom: 2px solid #ffe0b2;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.task-header h2 { margin: 0; color: #d84315; font-size: 19px; border-bottom: none; padding-bottom: 0; }
+.task-badge-label {
+    background-color: #d84315;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+.task-box-amber {
+    background-color: #fffaf5;
+    border: 1px solid #f0c7a8;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+.task-box-amber h4 { margin: 0 0 10px 0; color: #d84315; }
+
+/* ----- Inputs ------------------------------------------------------------ */
+.field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.field-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+.field-grid.auto { grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; }
+.field-grid label { font-weight: bold; }
+.field-grid.auto label { font-size: 12px; }
+.field-grid.auto input { padding: 4px 8px; font-size: 13px; }
+.check-row { display: flex; align-items: center; gap: 8px; cursor: pointer; font-size: 13px; font-weight: bold; margin-top: 12px; }
+.check-row input { width: auto; height: auto; }
+.required { color: #c62828; }
+
+.btn-group { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
+.btn-primary {
+    background-color: #d84315;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.btn-primary:hover { background-color: #bf360c; }
+.btn-secondary {
+    background-color: #fff3e0;
+    color: #d84315;
+    border: 1px solid #ffcc80;
+    padding: 8px 14px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.btn-secondary:hover { background-color: #ffe0b2; }
+
+/* ----- Result card + stat tiles ----------------------------------------- */
+.result-card {
+    background-color: #ffffff;
+    border: 1px solid #ffcc80;
+    border-radius: 6px;
+    padding: 15px;
+    margin: 15px 0 10px;
+    box-shadow: 0 2px 4px rgba(216, 67, 21, 0.08);
+}
+.result-card h3 {
+    margin-top: 0;
+    color: #bf360c;
+    border-bottom: 1px solid #ffe0b2;
+    padding-bottom: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+}
+.stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin: 12px 0; }
+.stat-card {
+    background: #fff8f0;
+    border: 1px solid #ffd8a8;
+    border-radius: 6px;
+    padding: 10px;
+    text-align: center;
+}
+.stat-label { font-size: 11px; color: #777777; text-transform: uppercase; letter-spacing: 0.5px; }
+.stat-value { font-size: 20px; font-weight: bold; color: #d84315; margin-top: 4px; }
+.stat-value.sm { font-size: 18px; }
+.stat-cool   { color: #1565c0; }
+.stat-hot    { color: #c62828; }
+.stat-warm   { color: #e65100; }
+.stat-danger { color: #b71c1c; }
+
+.status-line { background-color: #fafafa; border: 1px solid #eeeeee; padding: 10px; border-radius: 6px; margin-top: 8px; }
+.status-line p { margin: 0; font-size: 14px; }
+.status-line strong + span { font-weight: bold; }
+
+.expected-output { background-color: #ffffff; border: 1px solid #ffe0b2; border-radius: 6px; padding: 10px; margin-top: 10px; }
+.expected-output strong { color: #d84315; font-size: 12px; }
+.expected-output pre { margin: 4px 0 0 0; font-size: 12px; color: #333333; font-family: monospace; }
+
+.sandbox { display: none; background-color: #ffffff; border: 2px dashed #d84315; padding: 12px; border-radius: 6px; margin-top: 15px; }
+.sandbox h4 { color: #d84315; margin: 0 0 6px 0; font-size: 14px; }
+.sandbox iframe { width: 100%; height: 130px; border: 1px solid #cccccc; background: #ffffff; }
+
+/* ----- Status badges ------------------------------------------------------ */
+.status-badge { display: inline-block; padding: 4px 10px; border-radius: 4px; font-weight: bold; font-size: 12px; text-transform: uppercase; }
+.badge-severe { background-color: #ffebee; color: #c62828; border: 1px solid #ef9a9a; }
+.badge-high   { background-color: #fff3e0; color: #e65100; border: 1px solid #ffcc80; }
+.badge-mod    { background-color: #fffde7; color: #f57f17; border: 1px solid #fff59d; }
+.badge-normal { background-color: #e8f5e9; color: #2e7d32; border: 1px solid #a5d6a7; }
+.badge-info   { background-color: #e3f2fd; color: #1565c0; border: 1px solid #90caf9; }
+
+/* ----- Task 2: recommendation box ---------------------------------------- */
+.rec-box { background-color: #fff3e0; border-left: 5px solid #e65100; padding: 12px; border-radius: 4px; margin-top: 10px; }
+.rec-box h4 { margin: 0 0 4px 0; color: #bf360c; }
+.rec-box p { margin: 0; font-size: 13px; color: #444444; }
+.vuln-advice {
+    display: none;
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px dashed #ffcc80;
+    font-size: 12px;
+    color: #b71c1c;
+    font-weight: bold;
+}
+
+/* ----- Task 3: object ------------------------------------------------------ */
+.method-output { background-color: #fafafa; border: 1px solid #e0e0e0; padding: 10px; border-radius: 6px; margin-top: 10px; }
+.method-output p { margin: 0; font-size: 13px; }
+.method-output span { color: #d84315; font-weight: bold; }
+.action-result {
+    margin-top: 12px;
+    padding: 10px 12px;
+    background: #ffffff;
+    border: 1px solid #ffcc80;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #444444;
+}
+.task-box-amber h4.sub { font-size: 13px; margin: 14px 0 8px; }
+.task-box-amber .apply { margin-top: 10px; font-size: 13px; padding: 6px 14px; }
+
+/* ----- Task 4: array + bar chart ------------------------------------------- */
+.code-line {
+    background-color: #ffffff;
+    border: 1px solid #ffcc80;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 14px;
+    color: #d84315;
+    font-weight: bold;
+}
+.code-line span { color: #bf360c; }
+.array-controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: flex-end; margin-top: 15px; }
+.array-controls .grow { flex: 1; min-width: 140px; }
+.array-controls label { font-size: 12px; font-weight: bold; }
+.array-controls input { padding: 6px 10px; }
+.array-controls button { font-size: 13px; padding: 8px 14px; }
+
+.chart-container { background: #ffffff; border: 1px solid #eeeeee; border-radius: 6px; padding: 12px; margin: 15px 0 12px; }
+.chart-container h4 { margin: 0 0 10px 0; font-size: 12px; color: #666666; text-transform: uppercase; }
+.bar-chart { display: flex; align-items: flex-end; gap: 8px; height: 120px; padding-top: 10px; border-bottom: 2px solid #cccccc; }
+.bar-col { flex: 1; display: flex; flex-direction: column; align-items: center; height: 100%; justify-content: flex-end; }
+.bar-fill {
+    width: 100%;
+    border-radius: 4px 4px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: bold;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+    min-height: 16px;
+}
+.bar-label { font-size: 10px; color: #666666; margin-top: 4px; text-align: center; }
+.severe-heat { background: linear-gradient(to top, #c62828, #ef5350); }
+.high-heat   { background: linear-gradient(to top, #e65100, #ff9800); }
+.mod-heat    { background: linear-gradient(to top, #f57f17, #fbc02d); }
+.normal-heat { background: linear-gradient(to top, #2e7d32, #66bb6a); }
+
+/* ----- Tasks 5 & 6: validation feedback ------------------------------------ */
+.form-input-valid   { border-color: #2e7d32 !important; background-color: #f1f8e9 !important; }
+.form-input-invalid { border-color: #c62828 !important; background-color: #ffebee !important; }
+.error-message { color: #c62828; font-size: 12px; font-weight: bold; margin-top: 4px; display: block; }
+.success-message {
+    background-color: #e8f5e9;
+    border: 1px solid #a5d6a7;
+    border-left: 5px solid #2e7d32;
+    padding: 14px;
+    border-radius: 6px;
+    color: #1b5e20;
+}
+.success-message h3 { margin: 0 0 4px 0; color: #1b5e20; }
+.success-message p { margin: 0; font-size: 14px; }
+.summary-card { background-color: #ffffff; border: 1px solid #a5d6a7; border-radius: 6px; padding: 10px; margin-top: 8px; font-size: 13px; color: #2e7d32; }
