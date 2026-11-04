@@ -1,0 +1,2 @@
+# Netlify: React Router views (/react-app/home, /react-app/about) open the React app shell
+/react-app/*  /react-app/index.html  200
